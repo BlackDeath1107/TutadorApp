@@ -7,7 +7,6 @@ const Courseone = () => {
   const [videoQuality, setVideoQuality] = useState("720p");
   const [showSettings, setShowSettings] = useState(false);
 
-  // Sample course data - replace with your actual data
   const course = {
     title: "Introduction to Web Development",
     description:

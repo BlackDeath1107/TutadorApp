@@ -3,36 +3,32 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Question = () => {
-  // Initial state with 6 empty answers
   const [answers, setAnswers] = useState(Array(6).fill(""));
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
   const questions = [
-    "What is your favorite color?",
-    "How many hours do you sleep on average?",
-    "What is your preferred programming language?",
-    "How often do you exercise per week?",
-    "What is your favorite book?",
-    "Where would you like to travel next?",
+    "What is your field of study?",
+    "What degree are you pursuing currently?",
+    "What subject/topic would you like to learn?",
+    "What is your highest level of education?",
+    "What exams are you preparing for?",
+    "What would you like to use our platform for?",
   ];
 
-  // Handle input changes
+  
   const handleAnswerChange = (index, value) => {
     const newAnswers = [...answers];
     newAnswers[index] = value;
     setAnswers(newAnswers);
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted answers:", answers);
     setSubmitted(true);
-    // Add your submission logic here
   };
 
-  // Set focus on active question
   useEffect(() => {
     const input = document.getElementById(`question-${activeQuestion}`);
     if (input) {
@@ -43,12 +39,11 @@ const Question = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100 flex items-center justify-center p-4">
       <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl shadow-2xl w-full max-w-2xl p-8 border border-cyan-200 relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-cyan-300 to-blue-300 rounded-full opacity-20 blur-xl"></div>
         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-cyan-200 to-purple-200 rounded-full opacity-20 blur-xl"></div>
 
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 mb-8 text-center">
-          <span className="relative inline-block animate-pulse">
+          <span className="relative text-black inline-block animate-pulse">
             Questionnaire
             <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500"></span>
           </span>
@@ -91,11 +86,7 @@ const Question = () => {
                            focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent
                            hover:border-cyan-400 bg-white bg-opacity-80 transition-all duration-300
                            placeholder-cyan-300 text-cyan-800"
-                  placeholder={`Enter your ${question
-                    .toLowerCase()
-                    .split(" ")
-                    .slice(-1)[0]
-                    .replace("?", "")}`}
+                  placeholder={`Enter your answer`}
                 />
                 <div
                   className={`absolute inset-0 -z-10 rounded-lg transition-opacity duration-500 ${
