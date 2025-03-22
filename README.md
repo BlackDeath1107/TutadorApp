@@ -43,7 +43,8 @@
 <img width="1680" alt="Screenshot 2025-03-23 at 12 52 04 AM" src="https://github.com/user-attachments/assets/a8b46512-9a91-4b54-ae36-a0e76c038ed9" />
 <img width="1680" alt="Screenshot 2025-03-23 at 12 52 43 AM" src="https://github.com/user-attachments/assets/7e7b6f01-a8ef-479a-861a-065710955693" />
  <img width="1680" alt="Screenshot 2025-03-23 at 12 53 00 AM" src="https://github.com/user-attachments/assets/0c3a6f06-d33a-403c-8ff0-319b2c60b398" />
- 
+ <img width="1680" alt="Screenshot 2025-03-23 at 1 33 52 AM" src="https://github.com/user-attachments/assets/8f640f59-d757-401d-a125-96fcaf4f3e0b" />
+
  ### Technologies used 💻
  <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Acss"><img alt="CSS" src="https://img.shields.io/badge/CSS%20-%231572B6.svg?logo=css3&logoColor=white"></a>
   <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Ajavascript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?logo=javascript&logoColor=red"></a>
