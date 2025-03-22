@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const Dashboard = () => {
   // Sample data for courses
@@ -180,41 +181,40 @@ const Dashboard = () => {
             <div className="overflow-x-auto flex space-x-6 pb-4 scrollbar-hide">
               {filteredCourses.map((course) => (
                 <div key={course.id} className="flex-none w-72">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-40 object-cover"
-                    />
-                    <div className="p-4">
-                      <a
-                        href={`/course/${course.id}`}
-                        className="block text-lg font-semibold text-gray-800 hover:text-indigo-600 mb-1 truncate"
-                      >
-                        {course.title}
-                      </a>
-                      <p className="text-gray-600 text-sm mb-2">
-                        {course.instructor}
-                      </p>
-                      <div className="flex justify-between items-center">
-                        <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">
-                          {course.category}
-                        </span>
-                        <div className="flex items-center">
-                          <svg
-                            className="w-4 h-4 text-yellow-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                          <span className="text-gray-600 text-sm ml-1">
-                            4.8
+                  <Link href="/courseone" className="block">
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      <img
+                        src={course.image}
+                        alt={course.title}
+                        className="w-full h-40 object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="text-lg font-semibold text-gray-800 hover:text-indigo-600 mb-1 truncate">
+                          {course.title}
+                        </div>
+                        <p className="text-gray-600 text-sm mb-2">
+                          {course.instructor}
+                        </p>
+                        <div className="flex justify-between items-center">
+                          <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">
+                            {course.category}
                           </span>
+                          <div className="flex items-center">
+                            <svg
+                              className="w-4 h-4 text-yellow-400"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <span className="text-gray-600 text-sm ml-1">
+                              4.8
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -270,42 +270,41 @@ const Dashboard = () => {
             <div className="overflow-x-auto flex space-x-6 pb-4 scrollbar-hide">
               {teacherVideos.map((teacher) => (
                 <div key={teacher.id} className="flex-none w-72">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div className="relative">
-                      <img
-                        src={teacher.image}
-                        alt={teacher.name}
-                        className="w-full h-40 object-cover"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <button className="bg-indigo-600 bg-opacity-75 rounded-full p-3 text-white hover:bg-opacity-90 transition-all">
-                          <svg
-                            className="w-8 h-8"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </button>
+                  <Link href={`/teacher/${teacher.id}`} className="block">
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      <div className="relative">
+                        <img
+                          src={teacher.image}
+                          alt={teacher.name}
+                          className="w-full h-40 object-cover"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <button className="bg-indigo-600 bg-opacity-75 rounded-full p-3 text-white hover:bg-opacity-90 transition-all">
+                            <svg
+                              className="w-8 h-8"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <div className="text-lg font-semibold text-gray-800 hover:text-indigo-600 mb-1">
+                          {teacher.name}
+                        </div>
+                        <p className="text-gray-600 text-sm">
+                          {teacher.subject} Specialist
+                        </p>
                       </div>
                     </div>
-                    <div className="p-4">
-                      <a
-                        href={`/teacher/${teacher.id}`}
-                        className="block text-lg font-semibold text-gray-800 hover:text-indigo-600 mb-1"
-                      >
-                        {teacher.name}
-                      </a>
-                      <p className="text-gray-600 text-sm">
-                        {teacher.subject} Specialist
-                      </p>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
