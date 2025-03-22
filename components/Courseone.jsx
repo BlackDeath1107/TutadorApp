@@ -309,7 +309,6 @@ const Courseone = () => {
           ))}
         </ul>
 
-        {/* Additional subject filter buttons */}
         <div className="mt-8 border-t-2 border-cyan-100 pt-4">
           <h3 className="text-lg font-semibold mb-3 text-cyan-800">
             Filter by Subject
@@ -328,7 +327,6 @@ const Courseone = () => {
         </div>
       </div>
 
-      {/* Add styles for animations */}
       <style jsx>{`
         @keyframes fadeIn {
           from {

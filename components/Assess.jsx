@@ -91,7 +91,6 @@ const Assess = () => {
     ],
   };
 
-  // Get all questions for all subjects combined
   const getAllQuestions = () => {
     return [
       ...questionsBySubject.physics,
@@ -108,8 +107,7 @@ const Assess = () => {
   }, [currentSubject]);
 
   useEffect(() => {
-    // Don't reset user answers when changing subjects
-    // This preserves answers across subject tabs
+    
     setSubmitted(false);
   }, [currentSubject]);
 
@@ -136,7 +134,6 @@ const Assess = () => {
   };
 
   const handleSubjectSubmit = () => {
-    // Mark current subject as attempted
     setAllSubjectsAttempted((prev) => ({
       ...prev,
       [currentSubject]: true,
@@ -146,10 +143,8 @@ const Assess = () => {
   const handleFinalSubmit = () => {
     setSubmitted(true);
 
-    // Get all questions from all subjects
     const allQuestions = getAllQuestions();
 
-    // Calculate scores for each subject
     const physicsQuestions = questionsBySubject.physics;
     const chemistryQuestions = questionsBySubject.chemistry;
     const mathQuestions = questionsBySubject.mathematics;
@@ -158,10 +153,8 @@ const Assess = () => {
     const chemistryScore = calculateSubjectScore(chemistryQuestions);
     const mathScore = calculateSubjectScore(mathQuestions);
 
-    // Calculate total score
     const totalScore = physicsScore + chemistryScore + mathScore;
 
-    // Store all score information
     setFinalScores({
       physics: {
         total: physicsQuestions.length,
@@ -211,14 +204,13 @@ const Assess = () => {
     });
   };
 
-  // Helper function to calculate score for a subject
   const calculateSubjectScore = (questions) => {
     let score = 0;
     questions.forEach((q) => {
       if (userAnswers[q.id] === q.correctAnswer) {
-        score += 4; // +4 for correct
+        score += 4; 
       } else if (userAnswers[q.id]) {
-        score -= 1; // -1 for incorrect
+        score -= 1; 
       }
     });
     return score;
@@ -237,7 +229,6 @@ const Assess = () => {
     setCurrentSubject(subject);
   };
 
-  // Check if all subjects have been attempted
   const areAllSubjectsAttempted = () => {
     return (
       allSubjectsAttempted.physics &&
@@ -246,7 +237,6 @@ const Assess = () => {
     );
   };
 
-  // Get current progress
   const getSubjectsProgress = () => {
     const subjects = ["physics", "chemistry", "mathematics"];
     return subjects.filter((subject) =>
@@ -254,13 +244,10 @@ const Assess = () => {
     ).length;
   };
 
-  // Handle generate AI report button click
   const handleGenerateReport = () => {
     setGeneratingReport(true);
-    // Simulate API call or processing time
     setTimeout(() => {
       setGeneratingReport(false);
-      // Additional logic for showing the report would go here
     }, 2000);
   };
 
@@ -584,7 +571,6 @@ const Assess = () => {
                           : "Keep practicing! With more preparation, you'll see improvement."}
                       </div>
 
-                      {/* AI Report Button - Added as requested */}
                       <button
                         onClick={handleGenerateReport}
                         disabled={generatingReport}
@@ -634,7 +620,7 @@ const Assess = () => {
                                 d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                               ></path>
                             </svg>
-                            <Link href="#">Generate AI Report</Link>
+                            <Link href="/result">Generate AI Report</Link>
                           </span>
                         )}
                       </button>

@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import Loginbg from "../assets/Login.png"
 import Link from "next/link";
 import Loginbackground from "../assets/Loginbackground.png"
 
@@ -12,17 +11,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login attempt with:", { username, password });
-    // Add your authentication logic here
   };
 
   return (
     <div className="flex h-screen w-full bg-gray-50">
-      {/* Left side - Image */}
       <div className="flex items-center justify-center ">
         <Image src={Loginbackground} alt="loginbg" />
       </div>
 
-      {/* Right side - Login Form */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border-4 border-cyan-100 relative overflow-hidden">
           {/* Decorative Corner Elements */}

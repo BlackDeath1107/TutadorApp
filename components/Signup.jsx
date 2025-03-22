@@ -11,17 +11,14 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login attempt with:", { username, password });
-    // Add your authentication logic here
   };
 
   return (
     <div className="flex h-screen w-full bg-gray-50">
-      {/*Image */}
       <div className="flex items-center justify-center ">
         <Image src={SIgnupbackground} />
       </div>
 
-      {/* Signup Form */}
 
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative overflow-hidden border-t-4 border-b-4 border-blue-200">

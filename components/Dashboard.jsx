@@ -239,7 +239,6 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* Featured Courses Section */}
         <section className="mb-16">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-cyan-800 relative inline-block">
@@ -460,7 +459,6 @@ const Dashboard = () => {
               ))}
             </div>
 
-            {/* Scroll buttons */}
             <button
               onClick={() => scrollLeft("teachersCarousel")}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-cyan-50 transition-all duration-300 hover:scale-110 z-10 opacity-80 hover:opacity-100"
@@ -502,7 +500,6 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
         <section className="mt-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
@@ -531,7 +528,6 @@ const Dashboard = () => {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="bg-gradient-to-r from-cyan-800 to-cyan-900 text-white mt-16 py-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between">
@@ -632,7 +628,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Abstract shapes */}
         <div className="absolute bottom-0 left-0 w-full h-1/2 overflow-hidden">
           <svg
             className="absolute bottom-0 left-0 w-full h-auto"
@@ -651,7 +646,6 @@ const Dashboard = () => {
         </div>
       </footer>
 
-      {/* Add global CSS for animations */}
       <style jsx global>{`
         @keyframes float {
           0% {
