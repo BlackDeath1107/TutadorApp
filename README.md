@@ -49,11 +49,17 @@
  - Json
  
  
- ### Some screenshots 
- 
- 
- 
- ### Languages used for the front end
+ ### Some screenshots  
+<img width="1680" alt="Screenshot 2025-03-23 at 12 49 23 AM" src="https://github.com/user-attachments/assets/cc006944-a7e1-409c-a118-e20f8bd7e9bc" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 50 24 AM" src="https://github.com/user-attachments/assets/ee6ef766-c5be-40bd-8ca0-6c3f7795cebe" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 50 33 AM" src="https://github.com/user-attachments/assets/7d3b4809-0882-4ce5-99cb-71eb063715da" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 50 43 AM" src="https://github.com/user-attachments/assets/e7d3545c-c80a-47cc-ad9e-eda0b298a254" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 51 07 AM" src="https://github.com/user-attachments/assets/d9e13245-7897-4c7c-861f-cfdf268abf0a" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 52 04 AM" src="https://github.com/user-attachments/assets/a8b46512-9a91-4b54-ae36-a0e76c038ed9" />
+<img width="1680" alt="Screenshot 2025-03-23 at 12 52 43 AM" src="https://github.com/user-attachments/assets/7e7b6f01-a8ef-479a-861a-065710955693" />
+ <img width="1680" alt="Screenshot 2025-03-23 at 12 53 00 AM" src="https://github.com/user-attachments/assets/0c3a6f06-d33a-403c-8ff0-319b2c60b398" />
+
+ ### Languages used for the front end 
  - React.js 
  - Tailwaind Css
  
