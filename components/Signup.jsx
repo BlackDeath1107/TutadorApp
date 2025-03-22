@@ -19,7 +19,6 @@ const Signup = () => {
         <Image src={SIgnupbackground} />
       </div>
 
-
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative overflow-hidden border-t-4 border-b-4 border-blue-200">
           <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full opacity-70"></div>
@@ -57,7 +56,7 @@ const Signup = () => {
                     id="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
+                    className="w-full text-black  px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
                     placeholder="Choose a username"
                     required
                   />
@@ -89,7 +88,7 @@ const Signup = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
+                    className="w-full text-black px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
                     placeholder="Enter your email"
                     required
                   />
@@ -125,7 +124,7 @@ const Signup = () => {
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
+                    className="w-full text-black  px-4 py-3 border-2 border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-300 pl-10 bg-gradient-to-r from-white to-blue-50 shadow-sm group-hover:shadow-md"
                     placeholder="Create a password"
                     required
                   />

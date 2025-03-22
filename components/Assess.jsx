@@ -264,7 +264,7 @@ const Assess = () => {
               <div className="text-cyan-100 text-xl">Assessment Platform</div>
             </div>
             <div className="mt-4 md:mt-0 flex items-center gap-4">
-              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2 text-white font-medium flex items-center">
+              <div className="bg-white text-black bg-opacity-20 rounded-lg px-4 py-2 font-medium flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-2"
@@ -280,9 +280,11 @@ const Assess = () => {
                   />
                 </svg>
                 Time Remaining:{" "}
-                <span className="ml-2 font-bold">{formatTime(timeLeft)}</span>
+                <span className="ml-2 text-black font-bold">
+                  {formatTime(timeLeft)}
+                </span>
               </div>
-              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2 text-white font-medium flex items-center">
+              <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2 text-black font-medium flex items-center">
                 <span>Progress: {getSubjectsProgress()}/3 subjects</span>
               </div>
             </div>
